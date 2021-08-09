@@ -8,3 +8,7 @@ It does 2 types of tranformations. Flipping (in the X axis, Y axis, and Z axis d
 2. Matplotlib
 3. Numpy
 4. os
+## General Ideas
+The general idea is to take an image, its darknet label and transform both easily. There are more extensive tools available out there for such work, such as roboflow, but it was not possible to use those tools for the project. In general the box_rotator and box_flipper take the darknet label format(x_cen, y_cen, w, h) unnormalises them, finds the 4 corners, does the transformation, and returns a new darknet label which can then be saved in a .txt file. 
+
+After all the functions, there is around 20 lines of code, under 'MASS PRODUCTION' with an example workflow. Additionally there are 2 bits of code for testing the images have transformed correcly. 
